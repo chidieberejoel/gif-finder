@@ -1,6 +1,6 @@
 ## Run the application
 
-Rename the [.env.development](.env.development) file to .env and configure the variables appropriately.
+Rename the [.env.development](.env.development) file to .env and configure the variables appropriately (including your API Key).
 
 In the project directory, you can run the following commands in the order:
 
