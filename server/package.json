@@ -1,0 +1,38 @@
+{
+  "name": "gif-finder",
+  "version": "1.0.0",
+  "description": "Gif finder API",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node index.js",
+    "dev": "nodemon index.js --exec babel-node",
+    "build": "babel . --ignore **/node_modules --out-dir dist",
+    "lint": "eslint . --fix --ignore-path .eslintignore"
+  },
+  "keywords": [],
+  "author": "Chidiebere Joel",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^2.23.0",
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "graphql": "^15.5.0",
+    "graphql-relay": "^0.5.3",
+    "helmet": "^4.6.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.5",
+    "@babel/node": "^7.16.5",
+    "@babel/plugin-transform-runtime": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/register": "^7.16.5",
+    "eslint": "^8.5.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "nodemon": "^2.0.15"
+  }
+}

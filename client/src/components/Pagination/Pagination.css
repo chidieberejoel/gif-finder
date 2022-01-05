@@ -1,0 +1,85 @@
+.pagination-container {
+  align-items: center;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  margin-top: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination {
+  box-sizing: border-box;
+  vertical-align: baseline;
+  margin: 24px 0;
+  display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0px auto;
+  justify-content: space-between;
+}
+
+.pagination .pagination-item {
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid #97979760;
+  align-items: center;
+  box-shadow: 0px 2px 12px 3px #00000022;
+  margin: 6px;
+  width: auto;
+  height: 40px;
+  transition: 0.3s all ease-in-out;
+  background: inherit;
+}
+
+.pagination .pagination-item:hover {
+  background-color: #ea4c8905;
+  box-shadow: 0px 2px 12px 3px #00000039;
+  transform: scale(1.04);
+}
+
+.pagination .pagination-item {
+  display: flex;
+  text-align: center;
+  padding: 22px 10px;
+  color: #ea4c89;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.pagination-item div {
+  padding: 3px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination svg {
+  width: 12px;
+  height: 12px;
+  font-size: 1px;
+  color: inherit;
+  fill: currentColor;
+  display: block;
+}
+
+@media only screen and (max-width: 615px) {
+  .pagination li {
+    margin: 3px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .pagination {
+    width: auto;
+    padding: 6px;
+  }
+
+  .pagination .pagination-item {
+    font-size: 14px;
+    padding: 6px;
+  }
+}

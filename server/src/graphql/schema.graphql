@@ -1,0 +1,82 @@
+"""
+Search result item
+"""
+type Search {
+  id: String!
+  url: String!
+  title: String!
+  rating: String!
+  type: String!
+  images: Images!
+  user: User
+}
+
+"""
+Reduced and original image resolutions
+"""
+type Images {
+  original: ImageProperty!
+  downsized: ImageProperty!
+}
+
+# Ideally, we should return the camelCase format for these
+# fields if we are sure the conversion won't slow down our app
+"""
+Image author
+"""
+type User {
+  avatar_url: String
+  banner_image: String
+  display_name: String
+  website_url: String
+}
+
+"""
+Image resolution and properties
+"""
+type ImageProperty {
+  height: String!
+  width: String!
+  size: String!
+  url: String
+}
+
+"""
+Information about pagination in a connection.
+"""
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+  endCursor: String
+  total: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type searchEdge {
+  cursor: String!
+  node: Search
+}
+
+"""
+A connection to a list of items.
+"""
+type SearchConnection {
+  edges: [searchEdge]
+  pageInfo: PageInfo!
+}
+
+type Query {
+  """
+  Search result based on user's input.
+  """
+  search(
+    after: String
+    first: Int
+    before: String
+    last: Int
+    query: String!
+  ): SearchConnection!
+}

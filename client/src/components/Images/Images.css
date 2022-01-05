@@ -1,0 +1,24 @@
+.images {
+  box-sizing: border-box;
+  vertical-align: baseline;
+  padding-bottom: 18px;
+  width: 100%;
+}
+
+.image-content {
+  padding: 0 50px;
+}
+
+.search-result-title {
+  padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 615px) {
+  .image-content {
+    padding: 0 5px;
+  }
+
+  .images {
+    padding-bottom: 12px 0;
+  }
+}
